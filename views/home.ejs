@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wael's YouTube</title>
+    <link rel="stylesheet" type="text/css" href="slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick-theme.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="flex-div">
+        <div class="nav-left flex-div">
+            <img src="menu.png" alt="menu" class="menu-icon">
+            <img src="logo.png" class="logo">
+        </div>
+        <div class="nav-middle flex-div">
+            <div class="search-box flex-div">
+                <input type="text" placeholder="Search">
+                <img src="search.png">
+            </div>
+            <img src="voice-search.png" class="mic-icon">
+        </div>
+        <div class="nav-right flex-div">
+            <form action="/form" method="get">
+                <button class="btn">
+                    <img class="upload" src="upload.png">
+                </button>
+            </form>
+
+            <img src="more.png">
+            <img src="notification.png">
+            <span class="material-symbols-outlined">
+                account_circle
+            </span>
+        </div>
+    </nav>
+    <!-- ------ below header -------- !-->
+    <div class="belowheader">
+
+        <div>
+            <button class="options main">All</button>
+        </div>
+        <div>
+            <button class="options">FC Barcelona</button>
+        </div>
+        <div>
+            <button class="options">World Cup</button>
+        </div>
+        <div>
+            <button class="options">Responsive</button>
+        </div>
+        <div>
+            <button class="options">Music</button>
+        </div>
+        <div>
+            <button class="options">netflix</button>
+        </div>
+        <div>
+            <button class="options">javascript</button>
+        </div>
+        <div>
+            <button class="options">Live</button>
+        </div>
+        <div>
+            <button class="options">Gaming</button>
+        </div>
+        <div>
+            <button class="options">Football</button>
+        </div>
+        <div>
+            <button class="options">Web Development</button>
+        </div>
+        <div>
+            <button class="options">Brazil</button>
+        </div>
+
+    </div>
+    <!-- -------- sidebar --------  !-->
+    <div class="sidebar">
+        <div class="shortcut-links">
+            <a href=""><img src="home.png">
+                <p>Home</p>
+            </a>
+            <a href=""><img src="explore.png">
+                <p>Explore</p>
+            </a>
+            <a href=""><img src="subscription.png">
+                <p>Subscribe</p>
+            </a>
+            <a href=""><img src="library.png">
+                <p>Library</p>
+            </a>
+            <a href=""><img src="history.png" class="history">
+                <p>History</p>
+            </a>
+            <a href=""><img src="playlist.png" class="playlist">
+                <p>Playlist</p>
+            </a>
+            <a href=""><img src="messages.png" class="messages">
+                <p>Message</p>
+            </a>
+            <a href=""><img src="show-more.png" class="showmore">
+                <p>Show More</p>
+            </a>
+
+            <hr>
+        </div>
+        <div class="subscribed-list">
+            <h3>SUBSCRIBED</h3>
+            <a href=""><img src="Jack.png">
+                <p>Jack Nico</p>
+            </a>
+            <a href=""><img src="simon.png">
+                <p>Simon Back</p>
+            </a>
+            <a href=""><img src="tom.png">
+                <p>Tom Hardy</p>
+            </a>
+            <a href=""><img src="megan.png">
+                <p>Megan Ryan</p>
+            </a>
+            <a href=""><img src="cameron.png">
+                <p>Cameron D</p>
+            </a>
+        </div>
+    </div>
+
+    <!-- ----- main ----- -->
+
+    <div class="container">
+
+        <div class="list-container">
+            <% videos.forEach(entries=> { %>
+                <div class="vid-list">
+
+                    <a>
+                        <form action="view/:<%=entries._id%>" method="get">
+                            <button class="vid-info" style="border: none; background: white; ">
+
+                                <img class="thumbnail" style="width: 300px; height: 180px ;" src="<%=entries.thumbnail%>">
+                            </button>
+                        </form>
+
+                    </a>
+                    <div class="flex-div">
+                        <img src="jack.png" alt="">
+                        <div class="vid-info">
+                            <a href="">
+                                <%=entries.title%>
+                            </a>
+                            <a href="">
+                                <%=entries.description%>
+                            </a>
+
+                            <p>
+                                <%=entries.views%>&bull; 2 days
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <%})%>
+            
+           
+        </div>
+    </div>
+
+    <script>
+        var menuIcon = document.querySelector(".menu-icon");
+        var sidebar = document.querySelector(".sidebar");
+        var container = document.querySelector(".container");
+        var belowheader = document.querySelector(".belowheader");
+
+        menuIcon.onclick = function () {
+            sidebar.classList.toggle("small-sidebar");
+            container.classList.toggle("large-container");
+            belowheader.classList.toggle("belowheaderbig");
+        }
+    </script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.belowheader').slick({
+                slidesToShow: 9,
+                slidesToScroll: 8,
+                arrows: false
+            });
+        });
+    </script>
+</body>
+
+</html>

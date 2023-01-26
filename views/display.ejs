@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="flex-div">
+        <div class="nav-left flex-div">
+            <img src="menu.png" alt="menu" class="menu-icon">
+            <form action="/" method="get">
+                <button style="border:0px; background-color:white;">
+                    <img src="logo.png" class="logo">
+                </button>
+            </form>
+        </div>
+        <div class="nav-middle flex-div">
+            <div class="search-box flex-div">
+                <input type="text" placeholder="Search">
+                <img src="search.png">
+            </div>
+            <img src="voice-search.png" class="mic-icon">
+        </div>
+        <div class="nav-right flex-div">
+            <img src="upload.png">
+            <img src="more.png">
+            <img src="notification.png">
+            <img src="Jack.png" class="user-icon">
+        </div>
+    </nav>
+
+    <div class="container play-container">
+        <div class="row">
+            <div class="play-video">
+        
+                <video width="700px" height="600px"style="margin-top:-38px" controls autoplay>
+                    <source src=<%=entry.videoPath%> type="video/mp4">
+                   
+                </video>
+                <div class="tags">
+                    <a href="">#football</a> <a href="">#Camp Nou</a> <a href="">#Messi</a> 
+                    <a href="">#soccer</a> 
+                </div>
+                <h3>Best PlayGround</h3>
+
+                <div class="play-video-info">
+                    <p>1225 Views &bull; 2 days ago</p>
+                    <div>
+                        <a href=""><img src="like.png">125</a>
+                        <a href=""><img src="dislike.png">2</a>
+                        <a href=""><img src="share.png">Share</a>
+                        <a href=""><img src="save.png">Save</a>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="publisher">
+                    <img src="Jack.png">
+                    <div>
+                        <p>Easy Tutorials</p>
+                        <span>500k Subscriber</span>
+                    </div>
+                    <button type="button">Subscribe</button>
+                </div>
+
+                <div class="vid-description">
+                    <p>Channel that makes learning easy</p>
+                    <p>Subscribe easy Tutorials to watch more tutorials on web development</p>
+                    <hr>
+                    <h4>134 Comments</h4>
+
+                    <div class="add-comment">
+                        <img src="Jack.png">
+                        <input type="text" placeholder="Write comments...">
+                    </div>
+
+                    <div class="old-comment">
+                        <img src="Jack.png">
+                        <div>
+                            <h3>Jack Nicholson <span>2 days ago</span></h3>
+                            <p>A global computer network providing a variety of information 
+                                and communication facilities, consisting of interconnected 
+                                networks using standardized communication protocols.
+                            </p>
+
+                            <div class="comment-action">
+                                <img src="like.png">
+                                <span>244</span>
+                                <img src="dislike.png">
+                                <span>2</span>
+                                <span>REPLY</span>
+                                <a href="">All replies</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="old-comment">
+                        <img src="Jack.png">
+                        <div>
+                            <h3>Jack Nicholson <span>2 days ago</span></h3>
+                            <p>A global computer network providing a variety of information 
+                                and communication facilities, consisting of interconnected 
+                                networks using standardized communication protocols.
+                            </p>
+
+                            <div class="comment-action">
+                                <img src="like.png">
+                                <span>244</span>
+                                <img src="dislike.png">
+                                <span>2</span>
+                                <span>REPLY</span>
+                                <a href="">All replies</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+            <div class="right-sidebar">
+
+                <div class="side-video-list">
+                    <a href="" class="small-thumbnail"><img src="thumbnail1.png"></a>
+                    
+                    <div class="vid-info">
+                        <a href="">Best channel that help you to be a web developer</a>
+                        <p>Easy Tutorials</p>
+                        <p>15k Views</p>
+                    </div>
+                </div>
+
+                <div class="side-video-list">
+                    <a href="" class="small-thumbnail"><img src="thumbnail2.png"></a>
+                    
+                    <div class="vid-info">
+                        <a href="">Best channel that help you to be a web developer</a>
+                        <p>Easy Tutorials</p>
+                        <p>15k Views</p>
+                    </div>
+                </div>
+
+                <div class="side-video-list">
+                    <a href="" class="small-thumbnail"><img src="thumbnail3.png"></a>
+                    
+                    <div class="vid-info">
+                        <a href="">Best channel that help you to be a web developer</a>
+                        <p>Easy Tutorials</p>
+                        <p>15k Views</p>
+                    </div>
+                </div>
+
+                <div class="side-video-list">
+                    <a href="" class="small-thumbnail"><img src="thumbnail4.png"></a>
+                    
+                    <div class="vid-info">
+                        <a href="">Best channel that help you to be a web developer</a>
+                        <p>Easy Tutorials</p>
+                        <p>15k Views</p>
+                    </div>
+                </div>
+
+                <div class="side-video-list">
+                    <a href="" class="small-thumbnail"><img src="thumbnail5.png"></a>
+                    
+                    <div class="vid-info">
+                        <a href="">Best channel that help you to be a web developer</a>
+                        <p>Easy Tutorials</p>
+                        <p>15k Views</p>
+                    </div>
+                </div>
+
+                <div class="side-video-list">
+                    <a href="" class="small-thumbnail"><img src="thumbnail6.png"></a>
+                    
+                    <div class="vid-info">
+                        <a href="">Best channel that help you to be a web developer</a>
+                        <p>Easy Tutorials</p>
+                        <p>15k Views</p>
+                    </div>
+                </div>
+
+                <div class="side-video-list">
+                    <a href="" class="small-thumbnail"><img src="thumbnail7.png"></a>
+                    
+                    <div class="vid-info">
+                        <a href="">Best channel that help you to be a web developer</a>
+                        <p>Easy Tutorials</p>
+                        <p>15k Views</p>
+                    </div>
+                </div>
+
+                <div class="side-video-list">
+                    <a href="" class="small-thumbnail"><img src="thumbnail8.png"></a>
+                    
+                    <div class="vid-info">
+                        <a href="">Best channel that help you to be a web developer</a>
+                        <p>Easy Tutorials</p>
+                        <p>15k Views</p>
+                    </div>
+                </div>
+
+                <div class="side-video-list">
+                    <a href="" class="small-thumbnail"><img src="thumbnail1.png"></a>
+                    
+                    <div class="vid-info">
+                        <a href="">Best channel that help you to be a web developer</a>
+                        <p>Easy Tutorials</p>
+                        <p>15k Views</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
